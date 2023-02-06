@@ -1,0 +1,18 @@
+import unittest
+
+def check_letter(a):
+    if a.isdigit():
+        return True
+    return False
+
+
+class Test(unittest.TestCase):
+
+    def test_basic(self):
+        test_case = "abc"
+        self.assertFalse(check_letter(test_case))
+
+
+    def test_basic_2(self):
+        test_case = "123"
+        self.assertTrue(check_letter(test_case))
