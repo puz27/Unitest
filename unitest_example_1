@@ -1,0 +1,23 @@
+import unittest
+def check_question_status(a, b):
+    if b == 0:
+        return "division by zero"
+    return a / b
+
+#print(check_question_status(5, 0))
+
+class Test(unittest.TestCase):
+
+    def test_basik(self):
+        testcase1 = 5
+        testcase2 = 5
+        expected = 1
+        self.assertEqual(check_question_status(testcase1, testcase2), expected)
+
+    def test_null(self):
+        testcase1 = 5
+        testcase2 = 0
+        expected = "division by zero"
+        self.assertEqual(check_question_status(testcase1, testcase2), expected)
+
+unittest.main()
